@@ -1,7 +1,8 @@
 
 import pymupdf
+from chunking import Chunk
 
-class PdfDoc:
+class PdfDoc(Chunk):
     def __init__(self, path):
         self.doc = pymupdf.open(path)
 
@@ -17,4 +18,6 @@ class PdfDoc:
 
 # if __name__ == "__main__":
 #     doc = PdfDoc('../sample_project.pdf')
-#     print(doc.read())
+#     texts = PdfDoc.chunk(doc.read())
+#     print(texts)
+#     print(len(texts))

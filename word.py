@@ -1,7 +1,8 @@
 
 import docx
+from chunking import Chunk
 
-class WordDoc:
+class WordDoc(Chunk):
     """
     creates a word doc object, which will have functionality to work with .docx file.
     """
